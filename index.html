@@ -7,12 +7,13 @@
 </head>
 <body>
     <header>
+        <img src="./Logo.png">
         <h1>Restaurants à Paris</h1>
     </header>
     <main>
         <form>
             <label for="cuisine-type">Type de cuisine :</label>
-            <select id="cuisine-type-select">
+            <select id="cuisine-type-select" onchange="filterRestaurants()">
               <option value="Tous">Tous les types</option>
               <option value="francaise">E</option>
               <option value="italienne">S</option>

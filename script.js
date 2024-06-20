@@ -10,7 +10,7 @@ function getData() {
             //création d'une carte
             function AddCArd(nom, type) {
                 var card=document.createElement("div");
-                card.classList.add("card");
+                card.classList.add("card","restaurant-grid");
                 
                 var cardImg=document.createElement("img");
                 cardImg.src=restaurants[0].image;
@@ -70,17 +70,16 @@ const restaurants=[
     },
 ];
 
-document.getElementById("cuisine-type-select").addEventListener('change',
-    function() {
-        var selected=this.value;
-        var cards=document.querySelectorAll(".card .restaurant-grid");
-        cards.forEach(function (card) {
-            if(selected==='Tous'){
-                card.style.display="flex";
-            }else{
-                card.style.display="none";
-            }
-        });
-    }
-);
+function filterRestaurants() {
+    const selectedType = document.getElementById("cuisine-type-select").value;
+    const restaurantCards = document.querySelectorAll(".restaurant-grid");
+  
+    restaurantCards.forEach(card => {
+      if (selectedType === "Tous" || card.querySelector("p").textContent === selectedType) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
     
