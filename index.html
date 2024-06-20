@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste Restaurants</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurants à Paris</h1>
+    </header>
+    <main>
+        <form>
+            <label for="cuisine-type">Type de cuisine :</label>
+            <select id="cuisine-type-select">
+              <option value="Tous">Tous les types</option>
+              <option value="francaise">E</option>
+              <option value="italienne">S</option>
+            </select>            
+        </form>
+        <div class="restaurant-grid" id="container">
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
